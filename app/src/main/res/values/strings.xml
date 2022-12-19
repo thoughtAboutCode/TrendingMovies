@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Trending Movies</string>
+    <string name="reload_litteral">Reload</string>
+    <string name="loading_error_message">An error occurred…</string>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.MovieDetailFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/movie_poster"
+                android:layout_width="120dp"
+                android:layout_height="240dp"
+                android:layout_marginTop="40dp"
+                android:importantForAccessibility="no"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/movie_release_date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movie_poster" />
+
+            <TextView
+                android:id="@+id/movie_release_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/movie_title"
+                app:layout_constraintStart_toStartOf="@id/movie_title"
+                app:layout_constraintTop_toBottomOf="@id/movie_title" />
+
+            <TextView
+                android:id="@+id/movie_overview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/movie_title"
+                app:layout_constraintStart_toStartOf="@id/movie_title"
+                app:layout_constraintTop_toBottomOf="@id/movie_release_date" />
+
+            <ProgressBar
+                app:layout_constraintHorizontal_bias="1"
+                android:id="@+id/loading_indicator"
+                android:visibility="gone"
+                android:indeterminate="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>
